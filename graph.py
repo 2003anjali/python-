@@ -55,4 +55,4 @@ for i in range(n):
 g.prim_mst()
 
 
-        
+          
