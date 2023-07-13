@@ -45,17 +45,10 @@ def printNodes(node, val=''):
  
  
 # characters for huffman tree
-chars = []
-for x in range(6):
-   k = input("Enter the characters:")
-   chars.append(k)
-   
+chars = input("Enter the characters:").split(' ') #['a', 'b', 'c', 'd', 'e', 'f']
+ 
 # frequency of characters
-freq = []
-for y in range(6):
-   z = int(input("Enter the frequencies:"))
-   freq.append(z)
-
+freq =[int(i) for i in input("Enter the frequency:").split(' ')] #[5, 9, 12, 13, 16, 45]
  
 # list containing unused nodes
 nodes = []
@@ -83,9 +76,7 @@ while len(nodes) > 1:
     heapq.heappush(nodes, newNode)
  
 # Huffman Tree is ready!
-printNodes(nodes[0]) 
-
-
+printNodes(nodes[0])
 def decode_text(root, encoded_text):
     decoded_text = ""
     current_node = root
